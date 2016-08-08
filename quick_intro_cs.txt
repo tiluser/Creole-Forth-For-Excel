@@ -1,0 +1,71 @@
+Creole Forth for Excel Quick Intro and Cheat Sheet
+
+Q: What is Creole Forth for Excel? (Creole for short)
+
+A: A simple scripting/macro language written in VBA for Excel based on the Forth language.
+
+Q: What is Forth? 
+
+Forth is a stack-oriented language primarily known for programming hardware and embedded systems. It's 
+distinguished by its simple postfix syntax, passing of parameters via a stack, and miniscule size and 
+use of resources.    
+
+A: How does Creole work?
+1. A set of space-delimited values (words) is placed in an input-cell.
+2. One by one, they're looked up in a dictionary.
+3. If found, they're executed.
+4. If not, they're pushed onto the data stack. 
+
+Q: What version of Excel should I be using?
+
+A: It should be backward compatibile to version 2003.
+
+Q: How do I run my first program?
+A: 
+1. Open up the CFExcel1.xls workbook. 
+2. Make sure macros are enabled.
+3. The keyboard shortcut Ctrl-Shift-C sets up a Forth bundle (Forth environment) for the workbook.
+You will see two sheets that weren't there before: one with a GlobalDS label and the 
+other with a Dictionary label. 
+4. Go to the GlobalDS sheet.
+5. In the cell in the input area, enter two words: HELLO WORLD
+6. Two dialog boxes will pop up : the first says "Hello" and the second says "World"
+
+Q: That seems awfully simple. Can't it do more?
+
+A: Yes. Enter the following code into the InputArea cell and click the submit button:
+: SQR DUP Nx ; 
+
+This will compile the SQR definition into the dictionary. To execute it, type the
+following:
+2 SQR
+
+You will see the number 4 on the data stack. 
+
+Q: That still seems awfully simple.
+
+A: Perhaps, but it's already demonstrated one of the ways you can improve and extend the Creole Forth environment.
+There are several ways to extend the language but we'll mention two for starters:
+1. By creating additional "primitives". A primitive consists of a VBA class method that is defined in one of the class modules
+   attached to the spreadsheet. It must then be introduced into the Dictionary page via the BuildPrimitive method. 
+2. By adding high-level definitions. This is generally done through the colon compiler. Its job is to compile assemblages
+   of previously defined "words" or definitions. These behave as extensions to the language and are functionally indistinguishable 
+   from lower level (primitive definitions). 
+
+Q: How do I remove a Forth bundle?
+
+A: Ctrl-Shift-R. The CreoleForthInitPage will remain behind. It (the init page) does not really need to be removed. 
+Its purpose is to allow multiple Forth Bundles to coexist in the same workbook. 
+
+List of shortcuts and commands
+------------------------------
+Ctrl-Shift-C : Sets up default Forth Bundle, which consists of a GlobalDS page and a Dictionary page.
+Most of the time, you're only going to need one bundle. 
+Ctrl-Shift-R : Removes default Forth Bundle
+Ctrl-Shift-D : Removes a selected data structure cell. Make sure you do not obliterate its "marker".
+The marker is a named range that keeps track of the data structure depth. 
+Push button : Put a value in the Scratch cell,  and press the Push button. The value will be placed on
+top of the DataStack.
+Submit button : Submits code in the InputAea.
+Clean up stacks button: Push it and it will empty the DataStack. Right now, that's the only stack it
+cleans up. 
