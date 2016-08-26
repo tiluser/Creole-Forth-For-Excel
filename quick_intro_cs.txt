@@ -20,6 +20,11 @@ Q: What version of Excel should I be using?
 
 A: It should be backward compatibile to version 2003.
 
+Q: Does it work with OpenOffice/LibreOffice?
+
+A: No, at least not yet. It seems likely that a separate version would have to
+be developed to work with them.  
+
 Q: How do I run my first program?
 A: 
 1. Open up the CFExcel1.xls workbook. 
@@ -55,17 +60,14 @@ There are several ways to extend the language but we'll mention two for starters
 Q: How do I remove a Forth bundle?
 
 A: Ctrl-Shift-R. The CreoleForthInitPage will remain behind. It (the init page) does not really need to be removed. 
-Its purpose is to allow multiple Forth Bundles to coexist in the same workbook. 
+Its purpose is to allow multiple Forth Bundles to coexist in the same workbook.  
 
 List of shortcuts and commands
 ------------------------------
 Ctrl-Shift-C : Sets up default Forth Bundle, which consists of a GlobalDS page and a Dictionary page.
 Most of the time, you're only going to need one bundle. 
-Ctrl-Shift-R : Removes default Forth Bundle
-Ctrl-Shift-D : Removes a selected data structure cell. Make sure you do not obliterate its "marker".
-The marker is a named range that keeps track of the data structure depth. 
+Ctrl-Shift-R : Removes default Forth Bundle.
 Push button : Put a value in the Scratch cell,  and press the Push button. The value will be placed on
 top of the DataStack.
 Submit button : Submits code in the InputAea.
-Clean up stacks button: Push it and it will empty the DataStack. Right now, that's the only stack it
-cleans up. 
+Clean up stacks button: Push it and it will empty the DataStack, ReturnStack, and ParsedInput.
