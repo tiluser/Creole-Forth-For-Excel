@@ -85,13 +85,13 @@ There are several ways to extend the language but we'll mention two for starters
 
 List of shortcuts and commands
 ------------------------------
-Ctrl-Shift-C : Sets up default Forth Bundle, which consists of a GlobalDS page and a Dictionary page.
-Most of the time, you're only going to need one bundle. 
-Ctrl-Shift-R : Removes default Forth Bundle.
-Push button : Put a value in the Scratch cell,  and press the Push button. The value will be placed on
-top of the DataStack.
-Submit button : Submits code in the InputAea.
-Clean up stacks button: Push it and it will empty the DataStack, ReturnStack, and ParsedInput.
+1. Ctrl-Shift-C : Sets up default Forth Bundle, which consists of a GlobalDS page and a Dictionary page.
+   Most of the time, you're only going to need one bundle. 
+2. Ctrl-Shift-R : Removes default Forth Bundle.
+3. Push button : Put a value in the Scratch cell,  and press the Push button. The value will be placed on
+   top of the DataStack.
+4. Submit button : Submits code in the InputAea.
+5. Clean up stacks button: Push it and it will empty the DataStack, ReturnStack, and ParsedInput.
 
 Things to watch out for, especially for experienced Forth programmers
 ---------------------------------------------------------------------
