@@ -120,7 +120,7 @@ Things to watch out for, especially for experienced Forth programmers
 3. N+ replaces + because Excel will interpret a cell with a leading + as a formula. Same is true for N-.
    
 
-4. \* has become Nx due to trouble with the lookup process with *.
+4.  &#42; has become Nx due to trouble with the lookup process with *.
 
 5. Boolean comparison operators such as < , <=, >, =, etc are now LT, LE, GT, EQ, etc.
 
