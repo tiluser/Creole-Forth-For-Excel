@@ -132,7 +132,11 @@ Things to watch out for, especially for experienced Forth programmers
 Changes by date
 ---------------
 
-8/29/2016
+12/07/2016
+
+1. Added Forth Day 2016 PowerPoint presentation. 
+
+08/29/2016
 
 1. Updated README.md file with "Things to watch out for" and "Changes by date".
 
@@ -146,7 +150,7 @@ Changes by date
 
 2. There's a README.md file now. It's intended to replace the quick_intro_cs.txt file. 
 
-8/26/2016
+08/26/2016
 
 1. Toggling of screen updating in rebuild (is now many times faster)
 
@@ -173,5 +177,5 @@ Changes by date
 
 10. Set limit of ForthBundleCount to 4 - it's now a property of the ForthBundleParamSet.
 
-8/7/2016
+08/07/2016
 Initial commit. 
