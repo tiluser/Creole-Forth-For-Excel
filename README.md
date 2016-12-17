@@ -129,8 +129,21 @@ Things to watch out for, especially for experienced Forth programmers
 7. If something gets screwed up manually, the Ctrl-Shift-R/Ctrl-Shift-C will bring everything to its previous state. I generally prefer it now to using FORGET, although that's available.
 
 
+
 Changes by date
 ---------------
+12/17/2016
+1. Added the AppSpec/AppSpecMain modules to ease building of new primitives for the user and made APPSPEC the current default vocabulary. 
+
+2. Added "How to build primitives in creole forth for excel" PowerPoint presentation.
+
+3. Added a TutorialCode class module. It has examples from the presentation above
+   to paste into the AppSpec module and isn't meant to be used directly.
+
+4. Added list compiler { } which allows multiple arguments to be pushed onto the stack
+   and occupy one cell. 
+
+5. Set up the ExecForthWords sub to allow execution of CFE words in a string passed as a parameter. 
 
 12/07/2016
 
